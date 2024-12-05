@@ -8,11 +8,18 @@
 ---
 
 ## Project Overview
+Demo Video:
+
+
+
+https://github.com/user-attachments/assets/98bad45f-34f8-48e7-ae80-2b87f4ab7d0c
+
+
 
 Tutor Copilot is a system designed to detect and recommend effective pedagogical strategies in tutor-student dialogues using cutting-edge Natural Language Processing (NLP) techniques. It incorporates two classification layers:
 1. **Binary Classification:** Identifies whether a pedagogical strategy is present in a given dialogue.
 2. **Fine-Grained Classification:** Determines the specific pedagogical strategy used from 8 predefined categories.
-
+3. **Strategy Recommendation:** Recommends a pedagogical strategy based on the conversation context.
 In addition, the system recommends appropriate strategies based on the dialogue context, leveraging state-of-the-art models like BERT and GPT-4o for data augmentation.
 
 ---

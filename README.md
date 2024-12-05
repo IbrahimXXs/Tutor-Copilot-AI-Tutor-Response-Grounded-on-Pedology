@@ -46,6 +46,63 @@ In addition, the system recommends appropriate strategies based on the dialogue 
 
 ### Prerequisites
 - **Python 3.8 or higher**
+
+## Steps to Run
+
+### 1. Preprocessing and Augmentation
+- Run `Part2_GPT_Manual.ipynb` to augment the datasets using GPT-4o.
+
+### 2. Binary Classification
+- Use `Part1_Binary_Pedagogical_Strategy_Detection_SMOTE.ipynb` for traditional models.
+- Use `Part2_Binary_Pedagogical_Strategy_Detection_DataAugmentation.ipynb` for BERT-based classification.
+
+### 3. Fine-Grained Classification
+- Run `Part1_Multi_Class.ipynb` to fine-tune BERT on multi-class data.
+- Use `Part3_Sklearn_Models.ipynb` to compare sklearn models for fine-grained tasks.
+
+### 4. Combination and Recommendation
+- Execute `combination.py` for majority voting.
+- Run `probability_combination.py` for probabilistic strategy ranking.
+
+---
+
+## Results Summary
+
+### Binary Classification
+- **SMOTE Models:** Improved performance for imbalanced datasets.
+- **BERT (Augmented):** Achieved an F1 score of 98.5% with GPT-augmented data.
+
+### Fine-Grained Classification
+- **BERT Large (Augmented):** Achieved a Macro F1 score of 45.95% with balanced data.
+- **Challenges:** Models struggle with subtle strategies like `provide_example` and `provide_hint`.
+
+### Combination and Recommendations
+- **Majority Voting:** Aggregates predictions from multiple methods for final strategy recommendation.
+- **Probabilistic Voting:** Combines probability scores for nuanced ranked recommendations.
+
+---
+
+## Evaluation Metrics
+- **Accuracy**
+- **Precision**
+- **Recall**
+- **F1-Score**
+- **Confusion Matrix**
+
+---
+
+## Future Work
+1. Expand datasets to include diverse and multimodal inputs (e.g., facial expressions, gestures).
+2. Improve performance for subtle strategies through enhanced data augmentation and contextual understanding.
+3. Explore more advanced transformer-based models for better generalization.
+
+---
+
+## References
+- [Hugging Face Transformers](https://huggingface.co/transformers/)
+- [GPT-4o](https://openai.com/)
+- [Rank-BM25](https://pypi.org/project/rank-bm25/)
+
 - Install required dependencies:
   ```bash
   pip install pandas scikit-learn transformers sentence-transformers rank-bm25 matplotlib torch
